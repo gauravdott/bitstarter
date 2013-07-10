@@ -9,8 +9,8 @@ var readData = fs.readFileSync('index.html', "utf-8", function (err, data) {
 });
 
 app.get('/', function(request, response) {
-  var data = readData();
-  response.send(data);
+
+  response.send(readData);
 });
 
 var port = process.env.PORT || 5000;
